@@ -1,0 +1,290 @@
+<!doctype html><!--声明html版本编写指令  H5-->
+<html>
+	<head>
+		<!--声明页面编码  uft-8 国际编码-->
+		<meta charset="UTF-8">
+		<!--网站三要素 关键字  页面描述  标题-->
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>致亲爱的傻狗子</title>
+	
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		body{
+			background: rgb(55, 76, 86);
+		}
+	
+		.photo{
+			width:320px;
+			height:700px;
+			margin:50px 50px;
+			<!-- background:#000; -->
+			font-family:"微软雅黑";
+			padding: 5px;
+			background-color:#222;
+			border-radius: 20px;
+			box-shadow: 0 0 7px #fff;
+			overflow:hidden;
+			
+		}
+		.top{
+			width:320px;
+			height:23px;
+		
+		}
+		.title{
+			width:320px;
+			height:30px;
+			background:url("images/2.png") no-repeat;
+			font-size:20px;
+			color:#ccc;
+			font-weight:bold;
+			text-align:center;
+			line-height:30px;
+		}
+		.play{
+			margin-top: 10px;
+			width:200px;
+			height:200px;
+			background:url("img/11.jpg") no-repeat;
+			margin:auto;
+			border-radius:90%;
+		}
+		.singer{
+			width:320px;
+			font-size:16px;
+			background-color:#ccc;
+			text-align:center;
+			line-height:40px;
+			border-radius:50%;
+			font-family:"Times New Roman",Times,serif;
+		}
+		.lrc{
+			width:320px;
+			height:430px;
+			margin:15px auto;
+			text-align:center;
+			overflow:hidden;
+			color:#ccc;
+		}
+		.lrc p{
+			line-height:30px;
+			font-size:16px;
+			font-weight:bold;
+		}
+		.content{
+			position:relative;
+			left:0;
+			top:0;
+			overflow:hidden;
+			
+		}
+		.play.rotate{/*rot 10s旋转时间快慢*/
+			-webkit-animation:rot 10s linear infinite;
+			-moz-animation:rot 10s linear infinite;
+			-ms-animation:rot 10s linear infinite;
+			-o-animation:rot 10s linear infinite;
+			animation:rot 10s linear infinite;
+		}
+
+		@keyframes rot{/*旋转的角度*/
+			from{transform:rotate(0deg);}
+			to{transform:rotate(360deg);}
+		}
+		.input{
+
+			width:100%;
+			height:40px;
+			border-radius:70px;
+			outline:none;
+			color:white;
+			background:black;
+			font-weight:bold;
+			letter-spacing:1px;
+		}
+		.input:hover{
+		background:orange;
+		}
+		#wide-wrapper{
+			width:900px;
+			height:700px;
+			padding: 5px;
+			background:url("img/10.jpg") no-repeat;
+			background-size:100% 100%;
+			border-left:none;
+			border-radius:10px;
+			box-shadow: 0 0 7px #fff;
+			position:absolute;
+			top:50px;
+			left:380px;
+		}
+		@keyframes fn{
+		0% {transform:rotateX(-40deg) rotateY(0deg);}
+		100%{transform:rotateX(-20deg) rotateY(360deg);}
+		}
+		img{
+			width:205px;
+			height: 400px;
+		}
+		.box{				
+			width:400px;
+			height:500px;
+			position:relative;
+			margin:auto;
+			margin-top:150px;
+			transform-style:preserve-3d;/*3d样式*/
+			transform:rotateX(-20deg);
+			animation: fn 30s;
+			animation-iteration-count: infinite;/*无限制次数*/
+			animation-timing-function: linear;/*速度为匀速*/
+			position: relative;
+		}
+		.box:hover{
+			animation-play-state: paused;
+			cursor:pointer;
+		}
+		.box div{
+			width:205px;
+			height:500px;
+			position: absolute;
+			left:0;
+			top:0;
+		}
+		#display{
+			width:250px;
+			color:white;
+			font-size:16px;
+			padding-top: 5px;
+			white-space:normal;
+			text-indent:55px;
+			position:absolute;
+			left:100px;
+			top:400px;
+		}
+		.imgpic{
+			position: absolute;
+		}
+		.img{
+			width:50%;
+			height: 50%;
+		}
+	</style>
+	</head>
+	<body>
+	
+		<div id="display"></div>
+		<textarea id="txt" style="display:none"><!-- 隐藏此文本域 -->
+			[00:00.64]一路上有你 - 张学友
+			[00:03.70]曲：Jacky
+			[00:04.14]编曲：Jacky	
+			[00:10.60]你知道吗
+			[00:12.37]爱你并不容易
+			[00:15.80]还需要很多勇气
+			[00:20.90]是天意吧	
+			[00:23.00]好多话说不出去
+			[00:26.54]就是怕你负担不起
+			[00:31.39]你相信吗
+			[00:33.15]这一生遇见你
+			[00:36.57]是上辈子我欠你的
+			[00:41.43]是天意吧	
+			[00:43.79]让我爱上你
+			[00:47.29]才又让你 离我而去
+			[00:53.31]也许轮回里 早已注定
+			[00:57.65]今生就该我还给你
+			[01:03.63]一颗心在风雨里
+			[01:06.49]飘来飘去
+			[01:08.54]都是为你
+			[01:15.09]一路上有你
+			[01:17.65]苦一点也愿意
+			[01:20.23]就算是为了分离与我相遇
+			[01:25.49]一路上有你
+			[01:28.12]痛一点也愿意
+			[01:30.71]就算这辈子注定要和你分离
+			[01:44.50]你知道吗
+			[01:46.29]爱你并不容易
+			[01:49.59]还需要很多勇气
+			[01:54.77]是天意吧
+			[01:56.87]好多话说不出去
+			[02:00.30]就是怕你负担不起
+			[02:05.36]你相信吗
+			[02:07.11]这一生遇见你
+			[02:10.37]是上辈子我欠你的
+			[02:15.63]是天意吧
+			[02:17.64]让我爱上你
+			[02:21.09]才又让你离我而去
+			[02:26.81]也许轮回里 早已注定
+			[02:31.31]今生就该我还给你
+			[02:37.46]一颗心在风雨里
+			[02:40.43]飘来飘去
+			[02:42.75]都是为你
+			[02:49.23]一路上有你
+			[02:51.48]苦一点也愿意
+			[02:54.14]就算是为了分离与我相遇
+			[02:59.05]一路上有你
+			[03:01.87]痛一点也愿意
+			[03:04.50]就算这辈子注定要和你分离
+			[03:38.48]一路上有你
+			[03:40.95]苦一点也愿意
+			[03:43.58]就算是为了分离与我相遇
+			[03:48.92]一路上有你
+			[03:51.39]痛一点也愿意
+			[03:53.98]就算这辈子注定要和你分离
+			[03:59.35]一路上有你
+			[04:01.83]苦一点也愿意
+			[04:04.30]就算是为了分离与我相遇
+			[04:09.75]一路上有你
+			[04:12.23]痛一点也愿意
+			[04:14.71]就算只能在梦里拥抱你
+			[04:23.09]
+		</textarea>
+		<div class="photo">
+			<div class="top"></div>
+			<div class="title">一路上有你</div>
+			<div class="singer" style="font-size:20px"><strong>最爱的小王er啊</strong></div>
+			<div class="play"><!--开始图片--></div>
+			<div id="anniu">
+				 <input class="input" type="button" id="musicLoad" value="傻狗子读完了，点这里送给你" style="display: none;"> 
+			</div>
+			<div class="lrc">
+				<div class="content"></div>
+			</div>
+		</div>
+		<div id="wide-wrapper">
+				<div class="box">
+					<div style="transform: rotateY(0deg) translateZ(280px);">
+						<img src="img/1.jpg" >
+					</div>
+					<div style="transform: rotateY(40deg) translateZ(280px);">
+						<img src="img/2.jpg" >
+					</div>
+					<div style="transform: rotateY(80deg) translateZ(280px);">
+						<img src="img/3.jpg" >
+					</div>
+					<div style="transform: rotateY(120deg) translateZ(280px);">
+						<img src="img/4.jpg" >
+					</div>
+					<div style="transform: rotateY(160deg) translateZ(280px);">
+						<img src="img/5.jpg" >
+					</div>
+					<div style="transform: rotateY(200deg) translateZ(280px);">
+						<img src="img/6.jpg" >
+					</div>
+					<div style="transform: rotateY(240deg) translateZ(280px);">
+						<img src="img/7.jpg" >
+					</div>
+					<div style="transform: rotateY(280deg) translateZ(280px);">
+						<img src="img/8.jpg" >
+					</div>
+					<div style="transform: rotateY(320deg) translateZ(280px);">
+						<img src="img/9.jpg" >
+					</div>	
+				</div>
+		</div>
+		
+		<audio loop="loop" src="https://webfs.yun.kugou.com/201908041645/453ebf718f0d12c7c0835b705536f6dd/G003/M08/05/0F/o4YBAFS40tiAJLSBAEa-HrtGU-k581.mp3" id="myMusic" value="一路上有你"></audio><!--音频标签-->
+	</body>
+	<script type="text/javascript" src="demo.js"></script>
+</html>
